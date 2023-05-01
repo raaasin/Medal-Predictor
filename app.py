@@ -1,7 +1,6 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle 
-from waitress import serve
 app = Flask(__name__)
 
 model = pickle.load(open("olympic.pkl","rb"))
@@ -24,5 +23,5 @@ def predict():
 
 
 if __name__ == "__main__":
-        app.run(host='0.0.0.0',port=5000)
+        app.run(debug=True)
     
