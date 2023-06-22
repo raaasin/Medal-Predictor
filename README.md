@@ -38,10 +38,4 @@ To run the Olympic Medal Prediction Web Application locally, follow these steps:
 5. Enter the number of athletes and previous medals for a country in the provided input fields.
 6. Click the "Predict" button to see the predicted number of medals for that country.
 7. The prediction will be displayed on the same page.
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the [LICENSE](./LICENSE) file for more details.
-
----
-
+   
