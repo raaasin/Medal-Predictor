@@ -1,7 +1,5 @@
 # Olympic Medal Prediction Web Application
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
 This repository contains code for a web application that predicts the number of medals a country is expected to achieve in the Olympics based on the number of athletes and previous medals won.
 
 ## Table of Contents
