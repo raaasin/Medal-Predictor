@@ -24,7 +24,7 @@ To run the Olympic Medal Prediction Web Application locally, follow these steps:
 2. Ensure you have Python 3 installed on your system.
 3. Install the required dependencies by running the following command in your terminal:
    ```
-   pip install -r requirements.txt
+   pip install -r req.txt
    ```
 
 ## Usage
