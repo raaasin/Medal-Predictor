@@ -1,33 +1,77 @@
 <!DOCTYPE html>
-<html >
+<html>
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
   <title>ML API</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #343a40;
+      color: #fff;
+      font-family: 'Arimo', sans-serif;
+    }
+
+    .login {
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+
+    .login h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .login input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .login button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 
-<body> 
- <div class="login">
-	<h1>Olympic Medal Prediction</h1>
+<body>
+  <div class="login">
+    <h1>Olympic Medal Prediction</h1>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Atheletes" placeholder="no: of Atheletes" required="required" />
-        <input type="text" name="Previous_Medals" placeholder="Previous Medals" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+      <input type="text" name="Atheletes" placeholder="Number of Athletes" required="required" />
+      <input type="text" name="Previous_Medals" placeholder="Previous Medals" required="required" />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
-   <br>
-   <br>
-   {{ prediction_text }}
+    <br>
+    <br>
+    {{ prediction_text }}
+  </div>
 
- </div>
-
-
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
